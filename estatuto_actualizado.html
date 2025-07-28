@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Acceso Protegido</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #f2f2f2;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 250px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Introduce la contraseña para acceder al PDF</h2>
+  <input type="password" id="password" placeholder="Contraseña">
+  <br>
+  <button onclick="verificar()">Entrar</button>
+
+  <script>
+    function verificar() {
+      const clave = document.getElementById("password").value;
+      if (clave === "panconhuevo") {
+        // Cambia la ruta por la URL real del PDF en tu repositorio
+        window.location.href = "https://marco1090.github.io/certificado/estatuto_actualizado.html";
+      } else {
+        alert("Contraseña incorrecta. Intenta nuevamente.");
+      }
+    }
+  </script>
+</body>
+</html>
